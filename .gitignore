@@ -1,4 +1,6 @@
 
+# Produced objects 
+/target/
 *.class
 
 # Java artifacts
@@ -10,8 +12,8 @@
 hs_err_pid*
 
 # Intellij Stuff
-.idea/*
+/.idea/
 
 # Eclipse stuff
-.settings/*
+/.settings/
 
