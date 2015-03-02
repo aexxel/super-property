@@ -11,7 +11,6 @@ import java.math.BigInteger;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-@SuppressWarnings("rawtypes")
 public final class NulledConfigClass {
 
    public static final ConfigProperty<Boolean> NULL_PROPERTY_BOOL = Factory.createConfig();

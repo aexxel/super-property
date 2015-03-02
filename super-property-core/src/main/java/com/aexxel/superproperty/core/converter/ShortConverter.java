@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 public final class ShortConverter implements ValueConverter<Short> {
 
    private static final Logger LOGGER = Logger.getLogger(ShortConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}

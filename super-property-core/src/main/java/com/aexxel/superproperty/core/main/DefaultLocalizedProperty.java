@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 final class DefaultLocalizedProperty extends AbstractProperty<String> implements LocalizedProperty {
 
    private static final Logger LOGGER = Logger.getLogger(DefaultLocalizedProperty.class.getName());
+   private static final long serialVersionUID = 1L;
    private String message;
 
    /**

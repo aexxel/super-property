@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 public final class DoubleConverter implements ValueConverter<Double> {
 
    private static final Logger LOGGER = Logger.getLogger(DoubleConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}

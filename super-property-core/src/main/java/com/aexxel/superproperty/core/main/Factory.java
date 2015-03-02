@@ -65,7 +65,6 @@ public final class Factory {
 
    /**
     */
-   @SuppressWarnings("unchecked")
    public static LocalizedProperty createLocalized(final String aDefaultValue) {
       final Class<?> callerClass = Runtimes.getCallerClass();
       Objects.isNull(aDefaultValue, DEFAULT_VALUE_MSG);

@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 public final class URLConverter implements ValueConverter<URL> {
 
    private static final Logger LOGGER = Logger.getLogger(URLConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}

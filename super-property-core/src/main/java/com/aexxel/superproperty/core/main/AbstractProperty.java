@@ -10,6 +10,7 @@ import com.aexxel.superproperty.core.util.Objects;
  */
 abstract class AbstractProperty<T> implements Property<T> {
 
+   private static final long serialVersionUID = 1L;
    private final ClassContext classContext;
    private String name;
    private String key;
@@ -111,7 +112,7 @@ abstract class AbstractProperty<T> implements Property<T> {
       if (o == null || getClass() != o.getClass()) {
          return false;
       }
-      final AbstractProperty that = (AbstractProperty) o;
+      final AbstractProperty<?> that = (AbstractProperty<?>) o;
       return this.classContext.equals(that.classContext) && this.name.equals(that.name);
    }
 

@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 final class DefaultConfigProperty<T> extends AbstractConvertedProperty<T> implements ConfigProperty<T> {
 
    private static final Logger LOGGER = Logger.getLogger(DefaultConfigProperty.class.getName());
+   private static final long serialVersionUID = 1L;
    private T value;
 
    /**

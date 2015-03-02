@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 public final class ClassConverter implements ValueConverter<Class> {
 
    private static final Logger LOGGER = Logger.getLogger(ClassConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}

@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 public final class IntegerConverter implements ValueConverter<Integer> {
 
    private static final Logger LOGGER = Logger.getLogger(IntegerConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}

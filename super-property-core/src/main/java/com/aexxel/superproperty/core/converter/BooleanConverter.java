@@ -6,6 +6,8 @@ import com.aexxel.superproperty.core.ValueConverter;
  */
 public final class BooleanConverter implements ValueConverter<Boolean> {
 
+   private static final long serialVersionUID = 1L;
+
    /**
     * {@inheritDoc}
     */

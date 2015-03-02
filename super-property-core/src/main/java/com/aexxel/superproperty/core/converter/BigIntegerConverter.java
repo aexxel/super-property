@@ -9,6 +9,7 @@ import java.util.logging.Logger;
  */
 public final class BigIntegerConverter implements ValueConverter<BigInteger> {
 
+   private static final long serialVersionUID = 1L;
    private static final Logger LOGGER = Logger.getLogger(BigIntegerConverter.class.getName());
 
    /**

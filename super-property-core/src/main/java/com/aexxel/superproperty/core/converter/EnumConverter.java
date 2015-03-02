@@ -10,10 +10,12 @@ import java.util.logging.Logger;
 public final class EnumConverter<T extends Enum<T>> implements ValueConverter<T> {
 
    private static final Logger LOGGER = Logger.getLogger(EnumConverter.class.getName());
+   private static final long serialVersionUID = 1L;
    private final Class<T> valueClass;
 
    /**
     */
+   @SuppressWarnings("unchecked")
    public EnumConverter(final Class<T> aValueClass) {
       if (aValueClass.getEnclosingClass() == null) {
          this.valueClass = aValueClass;

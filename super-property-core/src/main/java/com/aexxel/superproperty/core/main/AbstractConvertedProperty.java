@@ -7,6 +7,7 @@ import com.aexxel.superproperty.core.ValueConverter;
  */
 abstract class AbstractConvertedProperty<T> extends AbstractProperty<T> implements ConvertedProperty<T> {
 
+   private static final long serialVersionUID = 1L;
    private ValueConverter<T> valueConverter;
 
    /**

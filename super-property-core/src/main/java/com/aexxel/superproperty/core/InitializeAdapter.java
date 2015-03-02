@@ -6,6 +6,7 @@ import java.io.Serializable;
  */
 public class InitializeAdapter implements Serializable {
 
+   private static final long serialVersionUID = 1L;
    private ValueFetcher valueFetcher;
    private String bundleName;
 

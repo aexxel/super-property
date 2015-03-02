@@ -11,6 +11,7 @@ import java.util.Set;
  */
 final class ClassContext implements Serializable {
 
+   private static final long serialVersionUID = 1L;
    private final Class<?> declaringClass;
    private final PropertyManager propertyManager;
    private final ValueFetcherFactory valueFetcherFactory;
@@ -33,6 +34,7 @@ final class ClassContext implements Serializable {
 
    /**
     */
+   @SuppressWarnings("unchecked")
    <T> Class<T> getDeclaringClass() {
       return (Class<T>) this.declaringClass;
    }
@@ -80,7 +82,7 @@ final class ClassContext implements Serializable {
       this.valueFetcher = this.valueFetcherFactory.create(this.initializeAdapter);
       for (AbstractProperty<?> property : result) {
          if (property instanceof DefaultConfigProperty) {
-            DefaultConfigProperty defaultConfigProperty = (DefaultConfigProperty) property;
+            DefaultConfigProperty<?> defaultConfigProperty = (DefaultConfigProperty<?>) property;
             defaultConfigProperty.getValue();
          } else if (property instanceof DefaultLocalizedProperty) {
             DefaultLocalizedProperty defaultLocalizedProperty = (DefaultLocalizedProperty) property;

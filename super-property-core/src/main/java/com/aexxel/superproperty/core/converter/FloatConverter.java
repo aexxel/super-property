@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 public final class FloatConverter implements ValueConverter<Float> {
 
    private static final Logger LOGGER = Logger.getLogger(FloatConverter.class.getName());
+   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}
