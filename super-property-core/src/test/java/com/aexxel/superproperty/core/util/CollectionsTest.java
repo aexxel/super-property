@@ -81,21 +81,23 @@ public class CollectionsTest {
       final Map.Entry<Integer, String> e2 = new AbstractMap.SimpleEntry<Integer, String>(2, "Robin");
       final Map.Entry<Integer, String> e3 = new AbstractMap.SimpleEntry<Integer, String>(3, "Spiderman");
 
-      String expected = "{}";
-      String actual = Collections.<Integer, String>newConcurrentMap().toString();
-      Assert.assertEquals(expected, actual);
+      Map<Integer, String> actual = Collections.<Integer, String>newConcurrentMap();
+      Assert.assertEquals("{}", actual.toString());
 
-      expected = "{1=Batman}";
-      actual = Collections.newConcurrentMap(e1).toString();
-      Assert.assertEquals(expected, actual);
+      actual = Collections.newConcurrentMap(e1);
+      Assert.assertEquals("Batman", actual.get(1));
+      Assert.assertNull(actual.get(2));
+      Assert.assertNull(actual.get(3));
 
-      expected = "{2=Robin, 1=Batman}";
-      actual = Collections.newConcurrentMap(e1, e2).toString();
-      Assert.assertEquals(expected, actual);
+      actual = Collections.newConcurrentMap(e1, e2);
+      Assert.assertEquals("Batman", actual.get(1));
+      Assert.assertEquals("Robin", actual.get(2));
+      Assert.assertNull(actual.get(3));
 
-      expected = "{2=Robin, 1=Batman, 3=Spiderman}";
-      actual = Collections.newConcurrentMap(e1, e2, e3).toString();
-      Assert.assertEquals(expected, actual);
+      actual = Collections.newConcurrentMap(e1, e2, e3);
+      Assert.assertEquals("Batman", actual.get(1));
+      Assert.assertEquals("Robin", actual.get(2));
+      Assert.assertEquals("Spiderman", actual.get(3));
    }
 
    @Test
