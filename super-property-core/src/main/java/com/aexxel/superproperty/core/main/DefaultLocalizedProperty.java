@@ -1,7 +1,13 @@
+/*
+ * Super Property, open source software.
+ * Copyright (C) 2015 Aexxel inc.
+ * License: Apache License Version 2.0.
+ */
 package com.aexxel.superproperty.core.main;
 
 import com.aexxel.superproperty.core.LocalizedProperty;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,7 +42,7 @@ final class DefaultLocalizedProperty extends AbstractProperty<String> implements
     */
    public String getMessage(Locale locale, Object... arguments) {
       if (LOGGER.isLoggable(Level.FINER)) {
-         LOGGER.finer("Locale " + locale + " arguments " + arguments);
+         LOGGER.finer("Locale " + locale + " arguments " + Arrays.toString(arguments));
       }
       verifyAndInitialize();
       return this.message;
@@ -54,7 +60,7 @@ final class DefaultLocalizedProperty extends AbstractProperty<String> implements
     */
    public String toString() {
       return "DefaultLocalizedProperty{" +
-            "message=" + this.message +
-            "} " + super.toString();
+             "message=" + this.message +
+             "} " + super.toString();
    }
 }
