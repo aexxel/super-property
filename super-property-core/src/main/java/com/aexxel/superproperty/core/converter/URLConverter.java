@@ -23,7 +23,8 @@ public final class URLConverter implements ValueConverter<URL> {
       final URL result;
       try {
          result = new URL(value);
-      } catch (final MalformedURLException e) {
+      }
+      catch (final MalformedURLException e) {
          final String message = "The input URL " + value + " could not be parsed";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

@@ -46,7 +46,9 @@ final class ValueConverterManager {
    @SuppressWarnings({"rawtypes", "unchecked"})
    <T> ValueConverter<T> getConverter(final Class<T> aValueClass) {
       Objects.isNull(aValueClass, "The input class should not be null");
-      final ValueConverter<T> result = (Enum.class.isAssignableFrom(aValueClass)) ?
+      final ValueConverter<T>
+            result =
+            (Enum.class.isAssignableFrom(aValueClass)) ?
             new EnumConverter(aValueClass) :
             getEffectiveValueConverter(aValueClass);
       Objects.isNull(result, "The input {} does not have a standard converter", aValueClass);

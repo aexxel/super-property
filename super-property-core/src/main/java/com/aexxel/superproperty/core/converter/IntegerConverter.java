@@ -21,7 +21,8 @@ public final class IntegerConverter implements ValueConverter<Integer> {
       final int result;
       try {
          result = Integer.parseInt(value.trim());
-      } catch (final NumberFormatException e) {
+      }
+      catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not an integer";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

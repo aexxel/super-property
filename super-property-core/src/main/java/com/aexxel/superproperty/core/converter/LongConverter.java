@@ -21,7 +21,8 @@ public final class LongConverter implements ValueConverter<Long> {
       final long result;
       try {
          result = Long.parseLong(value.trim());
-      } catch (final NumberFormatException e) {
+      }
+      catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a long";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

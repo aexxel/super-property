@@ -50,7 +50,7 @@ abstract class AbstractConvertedProperty<T> extends AbstractProperty<T> implemen
     */
    public String toString() {
       return "AbstractConvertedProperty{" +
-            "valueConverter=" + this.valueConverter +
-            "} " + super.toString();
+             "valueConverter=" + this.valueConverter +
+             "} " + super.toString();
    }
 }

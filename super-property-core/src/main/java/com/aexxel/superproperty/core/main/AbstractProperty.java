@@ -128,11 +128,11 @@ abstract class AbstractProperty<T> implements Property<T> {
     */
    public String toString() {
       return "AbstractProperty{" +
-            "classContext=" + this.classContext +
-            ", name='" + this.name + '\'' +
-            ", key='" + this.key + '\'' +
-            ", defaultValue='" + this.defaultValue + '\'' +
-            ", constraint=" + this.constraint +
-            '}';
+             "classContext=" + this.classContext +
+             ", name='" + this.name + '\'' +
+             ", key='" + this.key + '\'' +
+             ", defaultValue='" + this.defaultValue + '\'' +
+             ", constraint=" + this.constraint +
+             '}';
    }
 }

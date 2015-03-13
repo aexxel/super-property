@@ -56,7 +56,8 @@ final class DefaultValueFetcher implements ValueFetcher {
       String value = resourceBundle.getString(key);
       if ((value != null) && (objects != null) && (objects.length > 0)) {
          result = MessageFormat.format(value, objects);
-      } else {
+      }
+      else {
          result = value;
       }
       return result;
@@ -85,7 +86,7 @@ final class DefaultValueFetcher implements ValueFetcher {
     */
    public String toString() {
       return "DefaultValueFetcher{" +
-            "configName='" + this.configName + '\'' +
-            '}';
+             "configName='" + this.configName + '\'' +
+             '}';
    }
 }

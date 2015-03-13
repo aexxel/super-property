@@ -21,11 +21,14 @@ final class ValueFetcherFactory {
    ValueFetcher create(final InitializeAdapter initializeAdapter) {
       if (initializeAdapter == null) {
          return VALUE_FETCHER;
-      } else if (initializeAdapter.getBundleName() != null) {
+      }
+      else if (initializeAdapter.getBundleName() != null) {
          return new DefaultValueFetcher(initializeAdapter.getBundleName());
-      } else if (initializeAdapter.getValueFetcher() == null) {
+      }
+      else if (initializeAdapter.getValueFetcher() == null) {
          return initializeAdapter.getValueFetcher();
-      } else {
+      }
+      else {
          return VALUE_FETCHER;
       }
    }

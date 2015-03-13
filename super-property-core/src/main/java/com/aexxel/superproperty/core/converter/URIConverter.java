@@ -23,7 +23,8 @@ public final class URIConverter implements ValueConverter<URI> {
       final URI result;
       try {
          result = new URI(value);
-      } catch (final URISyntaxException e) {
+      }
+      catch (final URISyntaxException e) {
          final String message = "The input URI " + value + " could not be parsed";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message, e);

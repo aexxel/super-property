@@ -22,7 +22,8 @@ public final class ClassConverter implements ValueConverter<Class> {
       final Class<?> result;
       try {
          result = Class.forName(value);
-      } catch (final ClassNotFoundException e) {
+      }
+      catch (final ClassNotFoundException e) {
          final String message = "The input class " + value + " could not be found on the classpath";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message, e);

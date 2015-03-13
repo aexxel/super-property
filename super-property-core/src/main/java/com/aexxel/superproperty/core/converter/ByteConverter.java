@@ -21,7 +21,8 @@ public final class ByteConverter implements ValueConverter<Byte> {
       final byte result;
       try {
          result = Byte.parseByte(value.trim());
-      } catch (final NumberFormatException e) {
+      }
+      catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a byte";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
