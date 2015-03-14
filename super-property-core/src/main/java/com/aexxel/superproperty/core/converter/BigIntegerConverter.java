@@ -22,8 +22,7 @@ public final class BigIntegerConverter implements ValueConverter<BigInteger> {
       final BigInteger result;
       try {
          result = new BigInteger(value.trim());
-      }
-      catch (final NumberFormatException e) {
+      } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a BigInteger";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

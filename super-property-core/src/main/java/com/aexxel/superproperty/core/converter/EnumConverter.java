@@ -19,11 +19,9 @@ public final class EnumConverter<T extends Enum<T>> implements ValueConverter<T>
    public EnumConverter(final Class<T> aValueClass) {
       if (aValueClass.getEnclosingClass() == null) {
          this.valueClass = aValueClass;
-      }
-      else if (Enum.class.isAssignableFrom(aValueClass.getEnclosingClass())) {
+      } else if (Enum.class.isAssignableFrom(aValueClass.getEnclosingClass())) {
          this.valueClass = (Class<T>) aValueClass.getEnclosingClass();
-      }
-      else {
+      } else {
          this.valueClass = aValueClass;
       }
    }
@@ -53,10 +51,10 @@ public final class EnumConverter<T extends Enum<T>> implements ValueConverter<T>
     */
    public String toString() {
       return "EnumConverter{" +
-             "valueClass=" +
-             ((this.valueClass.getEnclosingClass() == null) ?
-              this.valueClass :
-              this.valueClass.getEnclosingClass()) +
-             '}';
+            "valueClass=" +
+            ((this.valueClass.getEnclosingClass() == null) ?
+                  this.valueClass :
+                  this.valueClass.getEnclosingClass()) +
+            '}';
    }
 }

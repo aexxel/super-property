@@ -53,7 +53,7 @@ final class DefaultConfigProperty<T> extends AbstractConvertedProperty<T> implem
     */
    public String toString() {
       return "DefaultConfigProperty{" +
-             "value=" + this.value +
-             "} " + super.toString();
+            "value=" + this.value +
+            "} " + super.toString();
    }
 }

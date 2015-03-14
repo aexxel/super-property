@@ -76,8 +76,7 @@ final class FactoryDelegate {
                result.addAll(context.initialize());
             }
          }
-      }
-      else {
+      } else {
          classContext.setInitializeAdapter(initializeAdapter);
          result = classContext.initialize();
       }
@@ -88,8 +87,8 @@ final class FactoryDelegate {
     */
    public String toString() {
       return "FactoryDelegate{" +
-             "classContextsMap=" + this.classContextsMap +
-             ", propertyManager=" + this.propertyManager +
-             '}';
+            "classContextsMap=" + this.classContextsMap +
+            ", propertyManager=" + this.propertyManager +
+            '}';
    }
 }

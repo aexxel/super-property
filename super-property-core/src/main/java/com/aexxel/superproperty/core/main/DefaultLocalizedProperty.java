@@ -60,7 +60,7 @@ final class DefaultLocalizedProperty extends AbstractProperty<String> implements
     */
    public String toString() {
       return "DefaultLocalizedProperty{" +
-             "message=" + this.message +
-             "} " + super.toString();
+            "message=" + this.message +
+            "} " + super.toString();
    }
 }

@@ -1,13 +1,6 @@
 package com.aexxel.superproperty.core;
 
-import com.aexxel.superproperty.core.sample.ConfigClass;
-import com.aexxel.superproperty.core.sample.InitializedConfigClass;
-import com.aexxel.superproperty.core.sample.NulledConfigClass;
-import com.aexxel.superproperty.core.sample.UnexpectedConfigClass0;
-import com.aexxel.superproperty.core.sample.UnexpectedConfigClass1;
-import com.aexxel.superproperty.core.sample.UnexpectedConfigClass2;
-import com.aexxel.superproperty.core.sample.UnexpectedConfigClass3;
-import com.aexxel.superproperty.core.sample.UnexpectedConfigClass4;
+import com.aexxel.superproperty.core.sample.*;
 import org.junit.Assert;
 import org.junit.Test;
 

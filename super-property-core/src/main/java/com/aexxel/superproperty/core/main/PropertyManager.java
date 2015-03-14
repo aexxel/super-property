@@ -8,11 +8,7 @@ import com.aexxel.superproperty.core.util.Objects;
 import com.aexxel.superproperty.core.util.Strings;
 
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.lang.reflect.WildcardType;
+import java.lang.reflect.*;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
@@ -79,8 +75,7 @@ final class PropertyManager {
          final String message = "The class context " + classContext + " is not registered";
          LOGGER.warning(message);
          throw new IllegalStateException(message);
-      }
-      else {
+      } else {
          final Set<AbstractProperty<?>> set = initialize(classContext, lock, registeredList);
          result.addAll(set);
       }
@@ -107,15 +102,13 @@ final class PropertyManager {
                         "No defined or configured property for " + field.getName() + " field";
                   LOGGER.warning(message);
                   throw new IllegalStateException(message);
-               }
-               else {
+               } else {
                   result.add(found);
                }
             }
             this.resolvedProperties.put(classContext, resolvedMap);
          }
-      }
-      finally {
+      } finally {
          lock.unlock();
       }
       return result;
@@ -177,8 +170,7 @@ final class PropertyManager {
       try {
          field.setAccessible(true);
          result = field.get(null);
-      }
-      catch (final IllegalAccessException e) {
+      } catch (final IllegalAccessException e) {
          final String message = "Could not access field " + field.getName();
          LOGGER.log(Level.WARNING, message, e);
          throw new IllegalStateException(message, e);
@@ -200,20 +192,17 @@ final class PropertyManager {
          if (type instanceof ParameterizedType) {
             final Type classType = getType((ParameterizedType) type, field);
             result = getClass(classType, PARAMETRIZED_TYPE_INDEX, genericType, field);
-         }
-         else if (type instanceof WildcardType) {
+         } else if (type instanceof WildcardType) {
             final Type classType = getType((WildcardType) type, field);
             result = getClass(classType, WILDCARD_TYPE_INDEX, genericType, field);
-         }
-         else {
+         } else {
             result = getClass(type, OTHER_TYPE_INDEX, genericType, field);
          }
-      }
-      else {
+      } else {
          final String message = "This generic type is not supported " +
-                                genericType +
-                                ON_THIS_FIELD +
-                                field;
+               genericType +
+               ON_THIS_FIELD +
+               field;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
@@ -226,17 +215,17 @@ final class PropertyManager {
       final Type[] types = parameterizedType.getActualTypeArguments();
       if (Collections.isEmpty(types)) {
          final String message = "There should be at least one type argument for " +
-                                parameterizedType +
-                                ON_THIS_FIELD +
-                                field;
+               parameterizedType +
+               ON_THIS_FIELD +
+               field;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
       if (types.length > 1) {
          final String message = "There should be only one type argument for " +
-                                parameterizedType +
-                                ON_THIS_FIELD +
-                                field;
+               parameterizedType +
+               ON_THIS_FIELD +
+               field;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
@@ -250,26 +239,26 @@ final class PropertyManager {
       final Type[] lowerTypes = wildcardType.getLowerBounds();
       if (Collections.isMoreThanOne(lowerTypes)) {
          final String message = "There should be only one lower bound for " +
-                                wildcardType +
-                                ON_THIS_FIELD +
-                                field;
+               wildcardType +
+               ON_THIS_FIELD +
+               field;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
       if (Collections.isMoreThanOne(upperTypes)) {
          final String message = "There should be only one upper bound for " +
-                                wildcardType +
-                                ON_THIS_FIELD +
-                                field;
+               wildcardType +
+               ON_THIS_FIELD +
+               field;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
       if (Collections.isEmpty(upperTypes) && Collections.isEmpty(lowerTypes)) {
          final String message = "Could not find any bounds for " +
-                                wildcardType +
-                                ON_THIS_FIELD +
-                                field +
-                                ". Therefore, String is considered as the value type";
+               wildcardType +
+               ON_THIS_FIELD +
+               field +
+               ". Therefore, String is considered as the value type";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
@@ -287,22 +276,21 @@ final class PropertyManager {
          result = (Class<?>) type;
          if (Object.class.equals(result)) {
             final String message = "Object of generic type is not supported " +
-                                   genericType +
-                                   ON_THIS_FIELD +
-                                   field +
-                                   ", index " +
-                                   index;
+                  genericType +
+                  ON_THIS_FIELD +
+                  field +
+                  ", index " +
+                  index;
             LOGGER.warning(message);
             throw new IllegalArgumentException(message);
          }
-      }
-      else {
+      } else {
          final String message = "This generic type is not supported " +
-                                genericType +
-                                ON_THIS_FIELD +
-                                field +
-                                ", index " +
-                                index;
+               genericType +
+               ON_THIS_FIELD +
+               field +
+               ", index " +
+               index;
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
       }
@@ -322,8 +310,8 @@ final class PropertyManager {
     */
    public String toString() {
       return "PropertyManager{" +
-             "registeredProperties=" +
-             (this.registeredProperties == null ? "" : this.registeredProperties.keySet()) +
-             '}';
+            "registeredProperties=" +
+            (this.registeredProperties == null ? "" : this.registeredProperties.keySet()) +
+            '}';
    }
 }

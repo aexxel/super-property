@@ -21,8 +21,7 @@ public final class FloatConverter implements ValueConverter<Float> {
       final float result;
       try {
          result = Float.parseFloat(value.trim());
-      }
-      catch (final NumberFormatException e) {
+      } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a float";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

@@ -65,8 +65,8 @@ public class InitializeAdapter implements Serializable {
     */
    public String toString() {
       return "InitializeAdapter{" +
-             "valueFetcher=" + valueFetcher +
-             ", bundleName='" + bundleName + '\'' +
-             '}';
+            "valueFetcher=" + valueFetcher +
+            ", bundleName='" + bundleName + '\'' +
+            '}';
    }
 }

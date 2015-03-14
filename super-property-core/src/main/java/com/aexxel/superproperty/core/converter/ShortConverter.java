@@ -21,8 +21,7 @@ public final class ShortConverter implements ValueConverter<Short> {
       final short result;
       try {
          result = Short.parseShort(value.trim());
-      }
-      catch (final NumberFormatException e) {
+      } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a short";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);

@@ -84,8 +84,7 @@ final class ClassContext implements Serializable {
          if (property instanceof DefaultConfigProperty) {
             DefaultConfigProperty<?> defaultConfigProperty = (DefaultConfigProperty<?>) property;
             defaultConfigProperty.getValue();
-         }
-         else if (property instanceof DefaultLocalizedProperty) {
+         } else if (property instanceof DefaultLocalizedProperty) {
             DefaultLocalizedProperty defaultLocalizedProperty = (DefaultLocalizedProperty) property;
             defaultLocalizedProperty.getMessage(defaultLocalizedProperty.getDefaultLocale());
          }
@@ -116,9 +115,9 @@ final class ClassContext implements Serializable {
     */
    public String toString() {
       return "ClassContext{" +
-             "declaringClass=" + this.declaringClass +
-             ", initializeAdapter=" + this.initializeAdapter +
-             ", valueFetcher=" + this.valueFetcher +
-             '}';
+            "declaringClass=" + this.declaringClass +
+            ", initializeAdapter=" + this.initializeAdapter +
+            ", valueFetcher=" + this.valueFetcher +
+            '}';
    }
 }

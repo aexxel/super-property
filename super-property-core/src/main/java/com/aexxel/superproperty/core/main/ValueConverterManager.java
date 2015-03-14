@@ -49,8 +49,8 @@ final class ValueConverterManager {
       final ValueConverter<T>
             result =
             (Enum.class.isAssignableFrom(aValueClass)) ?
-            new EnumConverter(aValueClass) :
-            getEffectiveValueConverter(aValueClass);
+                  new EnumConverter(aValueClass) :
+                  getEffectiveValueConverter(aValueClass);
       Objects.isNull(result, "The input {} does not have a standard converter", aValueClass);
       return result;
    }

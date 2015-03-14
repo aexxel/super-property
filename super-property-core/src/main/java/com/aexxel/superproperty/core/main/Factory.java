@@ -1,10 +1,6 @@
 package com.aexxel.superproperty.core.main;
 
-import com.aexxel.superproperty.core.ConfigProperty;
-import com.aexxel.superproperty.core.InitializeAdapter;
-import com.aexxel.superproperty.core.LocalizedProperty;
-import com.aexxel.superproperty.core.Property;
-import com.aexxel.superproperty.core.ValueConverter;
+import com.aexxel.superproperty.core.*;
 import com.aexxel.superproperty.core.util.Collections;
 import com.aexxel.superproperty.core.util.Objects;
 import com.aexxel.superproperty.core.util.Runtimes;

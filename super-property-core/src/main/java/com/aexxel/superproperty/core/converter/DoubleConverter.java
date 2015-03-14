@@ -21,8 +21,7 @@ public final class DoubleConverter implements ValueConverter<Double> {
       final double result;
       try {
          result = Double.parseDouble(value.trim());
-      }
-      catch (final NumberFormatException e) {
+      } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a double";
          LOGGER.warning(message);
          throw new IllegalArgumentException(message);
