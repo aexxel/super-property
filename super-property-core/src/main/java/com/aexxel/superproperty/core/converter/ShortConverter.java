@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 public final class ShortConverter implements ValueConverter<Short> {
 
    private static final Logger LOGGER = Logger.getLogger(ShortConverter.class.getName());
-   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}
@@ -24,7 +23,7 @@ public final class ShortConverter implements ValueConverter<Short> {
       } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a short";
          LOGGER.warning(message);
-         throw new IllegalArgumentException(message);
+         throw new IllegalArgumentException(message, e);
       }
       return result;
    }

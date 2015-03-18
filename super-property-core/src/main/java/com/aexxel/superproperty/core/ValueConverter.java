@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  */
-public interface ValueConverter<T> extends Serializable {
+public interface ValueConverter<T> {
 
    /**
     * Convert from a String to an object of the input class.

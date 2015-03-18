@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 public final class URLConverter implements ValueConverter<URL> {
 
    private static final Logger LOGGER = Logger.getLogger(URLConverter.class.getName());
-   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}
@@ -26,7 +25,7 @@ public final class URLConverter implements ValueConverter<URL> {
       } catch (final MalformedURLException e) {
          final String message = "The input URL " + value + " could not be parsed";
          LOGGER.warning(message);
-         throw new IllegalArgumentException(message);
+         throw new IllegalArgumentException(message, e);
       }
       return result;
    }

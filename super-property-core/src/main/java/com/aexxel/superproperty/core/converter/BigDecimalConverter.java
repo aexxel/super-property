@@ -10,7 +10,6 @@ import java.util.logging.Logger;
 public final class BigDecimalConverter implements ValueConverter<BigDecimal> {
 
    private static final Logger LOGGER = Logger.getLogger(BigDecimalConverter.class.getName());
-   private static final long serialVersionUID = 1L;
 
    /**
     * {@inheritDoc}
@@ -25,7 +24,7 @@ public final class BigDecimalConverter implements ValueConverter<BigDecimal> {
       } catch (final NumberFormatException e) {
          final String message = "The input value " + value + " is not a BigDecimal";
          LOGGER.warning(message);
-         throw new IllegalArgumentException(message);
+         throw new IllegalArgumentException(message, e);
       }
       return result;
    }

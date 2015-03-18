@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  */
-public class InitializeAdapter implements Serializable {
+public class InitializeAdapter {
 
    private static final long serialVersionUID = 1L;
    private ValueFetcher valueFetcher;

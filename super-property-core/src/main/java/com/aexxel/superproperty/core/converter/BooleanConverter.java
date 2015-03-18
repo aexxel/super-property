@@ -6,14 +6,12 @@ import com.aexxel.superproperty.core.ValueConverter;
  */
 public final class BooleanConverter implements ValueConverter<Boolean> {
 
-   private static final long serialVersionUID = 1L;
-
    /**
     * {@inheritDoc}
     */
    public Boolean convert(final String value) {
       if (value == null) {
-         return null;
+         return Boolean.FALSE;
       }
       return Boolean.parseBoolean(value.trim());
    }

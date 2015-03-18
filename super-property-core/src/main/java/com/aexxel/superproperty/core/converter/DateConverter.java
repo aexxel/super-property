@@ -9,8 +9,6 @@ import java.sql.Date;
  */
 public final class DateConverter implements ValueConverter<Date> {
 
-   private static final long serialVersionUID = 1L;
-
    /**
     * {@inheritDoc}
     */

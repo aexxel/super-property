@@ -14,7 +14,6 @@ import java.util.concurrent.ConcurrentMap;
 final class DefaultValueFetcher implements ValueFetcher {
 
    private final String configName;
-   private static final long serialVersionUID = 1L;
    private final ConcurrentMap<Locale, ResourceBundle> resourceBundles;
    private final ResourceBundle defaultResourceBundle;
 

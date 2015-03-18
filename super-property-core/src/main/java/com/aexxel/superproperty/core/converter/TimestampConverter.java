@@ -9,8 +9,6 @@ import java.sql.Timestamp;
  */
 public final class TimestampConverter implements ValueConverter<Timestamp> {
 
-   private static final long serialVersionUID = 1L;
-
    /**
     * {@inheritDoc}
     */

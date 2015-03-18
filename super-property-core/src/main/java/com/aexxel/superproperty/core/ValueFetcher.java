@@ -5,7 +5,7 @@ import java.util.Locale;
 
 /**
  */
-public interface ValueFetcher extends Serializable {
+public interface ValueFetcher {
 
    /**
     * Get the string value of a property depending on its key.
