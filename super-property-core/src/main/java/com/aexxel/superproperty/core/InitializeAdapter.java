@@ -1,19 +1,16 @@
 package com.aexxel.superproperty.core;
 
-import java.io.Serializable;
-
 /**
  */
 public class InitializeAdapter {
 
-   private static final long serialVersionUID = 1L;
    private ValueFetcher valueFetcher;
    private String bundleName;
 
    /**
     */
    public ValueFetcher getValueFetcher() {
-      return valueFetcher;
+      return this.valueFetcher;
    }
 
    /**
@@ -25,7 +22,7 @@ public class InitializeAdapter {
    /**
     */
    public String getBundleName() {
-      return bundleName;
+      return this.bundleName;
    }
 
    /**
@@ -44,10 +41,10 @@ public class InitializeAdapter {
          return false;
       }
       InitializeAdapter that = (InitializeAdapter) o;
-      if (bundleName != null ? !bundleName.equals(that.bundleName) : that.bundleName != null) {
+      if (this.bundleName != null ? !this.bundleName.equals(that.bundleName) : that.bundleName != null) {
          return false;
       }
-      if (valueFetcher != null ? !valueFetcher.equals(that.valueFetcher) : that.valueFetcher != null) {
+      if (this.valueFetcher != null ? !this.valueFetcher.equals(that.valueFetcher) : that.valueFetcher != null) {
          return false;
       }
       return true;
@@ -56,8 +53,8 @@ public class InitializeAdapter {
    /**
     */
    public int hashCode() {
-      int result = valueFetcher != null ? valueFetcher.hashCode() : 0;
-      result = Constant.HASH_31 * result + (bundleName != null ? bundleName.hashCode() : 0);
+      int result = this.valueFetcher != null ? this.valueFetcher.hashCode() : 0;
+      result = Constant.HASH_31 * result + (this.bundleName != null ? this.bundleName.hashCode() : 0);
       return result;
    }
 
@@ -65,8 +62,8 @@ public class InitializeAdapter {
     */
    public String toString() {
       return "InitializeAdapter{" +
-            "valueFetcher=" + valueFetcher +
-            ", bundleName='" + bundleName + '\'' +
+            "valueFetcher=" + this.valueFetcher +
+            ", bundleName='" + this.bundleName + '\'' +
             '}';
    }
 }

@@ -4,12 +4,11 @@ import com.aexxel.superproperty.core.InitializeAdapter;
 import com.aexxel.superproperty.core.ValueFetcher;
 import com.aexxel.superproperty.core.util.Objects;
 
-import java.io.Serializable;
 import java.util.Set;
 
 /**
  */
-final class ClassContext implements Serializable {
+final class ClassContext {
 
    private static final long serialVersionUID = 1L;
    private final Class<?> declaringClass;

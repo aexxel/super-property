@@ -1,10 +1,8 @@
 package com.aexxel.superproperty.core;
 
-import java.io.Serializable;
-
 /**
  */
-public interface Property<T> extends Serializable {
+public interface Property<T> {
 
    /**
     * Get the declaring class of the property, which class defines this property.<br/>

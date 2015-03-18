@@ -1,7 +1,5 @@
 package com.aexxel.superproperty.core;
 
-import java.io.Serializable;
-
 /**
  */
 public interface ValueConverter<T> {

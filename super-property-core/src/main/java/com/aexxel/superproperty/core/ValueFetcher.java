@@ -1,6 +1,5 @@
 package com.aexxel.superproperty.core;
 
-import java.io.Serializable;
 import java.util.Locale;
 
 /**
